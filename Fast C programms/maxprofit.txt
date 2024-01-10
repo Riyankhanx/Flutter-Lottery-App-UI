@@ -1,0 +1,46 @@
+int main() {
+  int ch,a,b;
+  void(*fptr[10])(int,int)={sum,subt,mul};
+  printf("Enter your choice(0-2) \t:"),scanf("%d",&ch);
+  printf("ENter values of a and b\n"),scanf("%d %d",&a,&b);
+ (*fptr[ch])(a,b);
+    return 0;
+    
+    
+}
+
+
+
+
+
+
+
+//practice
+int maxprofit(int prices[],int n){
+    if(n<=1){
+        return 0;
+    }
+    int maxprofit=0;
+    int minprices=prices[0];
+    for(int i=0;i<n;i++){
+        int currentprof=profit[i]-minprice;
+        maxprfit=(currentprofit>maxprofit)?currentprofit:maxprofit;
+        minprices=(prices[i]<minprices)?prices[i]:minprices;
+        
+    }
+    return maxprofit;
+    
+}
+int main(){
+    
+    
+    int n;
+    printf("Enter number of days\n");
+    scanf("%d",&n);
+    int prices[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&prices[i]);
+    }
+    maxprofit(prices,n);
+    
+}
